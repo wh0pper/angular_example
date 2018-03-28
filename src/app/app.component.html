@@ -3,5 +3,10 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <app-people></app-people>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/people">People</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-message></app-message>
 </div>

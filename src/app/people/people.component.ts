@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
-import { PEOPLE } from '../people';
+
+import { PersonService } from '../person.service';
 
 @Component({
   selector: 'app-people',
@@ -9,17 +10,15 @@ import { PEOPLE } from '../people';
 })
 
 export class PeopleComponent implements OnInit {
+  people: Person[];
 
-  people = PEOPLE;
-
-  selectedPerson: Person;
-
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
+    this.getPeople();
   }
 
-  onSelect(person: Person): void {
-    this.selectedPerson = person;
+  getPeople(): void {
+    this.personService.getPeople().subscribe(people => this.people = people);
   }
 }
