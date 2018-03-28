@@ -1,7 +1,4 @@
-.selected {
-  background-color: #CFD8DC !important;
-  color: white;
-}
+/* HeroesComponent's private CSS styles */
 .people {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -9,29 +6,34 @@
   width: 15em;
 }
 .people li {
-  cursor: pointer;
   position: relative;
-  left: 0;
+  cursor: pointer;
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
-  text-align: left;
+  text-align: left
 }
-.people li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
-}
+
 .people li:hover {
   color: #607D8B;
   background-color: #DDD;
   left: .1em;
 }
-.people .text {
+
+.people a {
+  color: #888;
+  text-decoration: none;
   position: relative;
-  top: -3px;
+  display: block;
+  width: 250px;
 }
+
+.people a:hover {
+  color:#607D8B;
+}
+
 .people .badge {
   display: inline-block;
   font-size: small;
@@ -43,6 +45,8 @@
   left: -1px;
   top: -4px;
   height: 1.8em;
+  min-width: 16px;
+  text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }

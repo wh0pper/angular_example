@@ -14,7 +14,7 @@ export class PersonDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService,
+    private personService: PersonService,
     private location: Location
   ) { }
 
